@@ -50,9 +50,7 @@ function toggleStyle(id){
     console.log(selected);
 
     selected.classList.add('bg-blue-400', 'text-white')
-    selected.classList.remove('bg-white', 'text-black')
-
-    
+    selected.classList.remove('bg-white', 'text-black') 
 }
 
 
@@ -64,9 +62,11 @@ mainContainer.addEventListener('click',function(event){
 
     const jobName = parentNode.querySelector('.job-name')
 
-    
+
 
 
 
      
 })
+
+const joy = "godd"
