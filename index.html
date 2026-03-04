@@ -48,19 +48,24 @@
 
         <h2 class="font-bold text-lg">Available job</h2>
 
+<div class="flex justify-between">
         <div class="flex end-3 gap-6">
 
-            <button onclick="toggleStyle('all-filter-button')" id="all-filter-button" class="bg-blue-400 text-white px-6 py-3 rounded-md">All</button>
-            <button onclick="toggleStyle('interview-filter-button')" id="interview-filter-button" class="bg-white text-black   px-6 py-3 rounded-md">interview</button>
-            <button onclick="toggleStyle('Rejected-filter-button')" id="Rejected-filter-button" class="bg-white text-black px-6 py-3 rounded-md">Rejected</button>
-
+            <button onclick="switchTab('all')" id="tab-all" class="bg-white text-black   px-6 py-3 rounded-md">All</button>
+            <button onclick="switchTab('interview')" id="tab-interview" class="bg-white text-black   px-6 py-3 rounded-md">interview</button>
+            <button onclick="switchTab('rejected')" id="tab-rejected" class="bg-white text-black px-6 py-3 rounded-md">Rejected</button>
+             
 
         </div>
 
+        <p><span id="stats"> 8 </span> jobs</p>
+</div>
 
+       
 
+<div id="jobs-container">
 
-<section id="allcards" class=" mt-6 flex flex-col gap-5  ">
+<section id="allcards" class="hidden mt-6 flex flex-col gap-5 ">
 
 
     
@@ -72,25 +77,25 @@
         <div  class="space-y-5">
 
             <h2 class=" job-name text-[#002C5C] font-bold text-xl ">Mobile First Corp</h2>
-            <p class="text-[#64748B] ">React Native Developer</p>
+            <p class="text-[#64748B] skillName ">React Native Developer</p>
 
 
-            <p class="text-[#64748B]">Remote
+            <p class="text-[#64748B] sarlary">Remote
                 •
                 Full-time
                 •
                 $130,000 - $175,000</p>
 
-            <button class="text-[#002C5C] rounded-md bg-[#EEF4FF] text-md font-semibold   px-4 py-2">Not Applied</button>
+            <button class="text-[#002C5C] applide rounded-md bg-[#EEF4FF] text-md font-semibold   px-4 py-2">Not Applied</button>
 
-            <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users
+            <p class="notes">Build cross-platform mobile applications using React Native. Work on products used by millions of users
                 worldwide.</p>
 
 
                 <div class="flex gap-3">
-                    <button class="text-green-400 rounded-md text-md font-bold border-2 border-green-400 px-4 py-2">INTERVIEW</button>
+                    <button class="text-green-400 intervew-btn rounded-md text-md font-bold border-2 border-green-400 px-4 py-2">INTERVIEW</button>
 
-                    <button class="text-red-400 rounded-md text-md font-bold border-2 border-red-400 px-4 py-2" >REJECTED</button>
+                    <button class="text-red-400 rejected-btn rounded-md text-md font-bold border-2 border-red-400 px-4 py-2" >REJECTED</button>
                 </div>
 
 
@@ -98,9 +103,9 @@
 
 
         <!-- main part 2 -->
-        <div >
+        <div>
 
-            <img class="border-2 border-[#c7cdd6] rounded-full p-3 w-[50px]" src="./Trash (1).png" alt="">
+            <img class="border-2 border-[#c7cdd6] delete rounded-full p-3 w-[50px]" src="./Trash (1).png" alt="">
         </div>
 
 
@@ -109,30 +114,30 @@
 
 
 
-<div class="bg-white p-5 flex justify-between rounded-md ">
+<div class="bg-white p-5 flex  card  justify-between rounded-md ">
 
         <!-- main part 1 -->
         <div  class="space-y-5">
 
             <h2 class=" text-[#002C5C] font-bold text-xl job-name">WebFlow Agency</h2>
-            <p class="text-[#64748B] ">Web Designer & Developer</p>
+            <p class="text-[#64748B] skillName ">Web Designer & Developer</p>
 
 
-            <p class="text-[#64748B]">Los Angeles, CA
+            <p class="text-[#64748B] sarlary">Los Angeles, CA
  • 
 Part-time 
 •
  $80,000 - $120,000</p>
 
-            <button class="text-[#002C5C] rounded-md bg-[#EEF4FF] text-md font-semibold   px-4 py-2">Not Applied</button>
+            <button class="text-[#002C5C] applide rounded-md bg-[#EEF4FF] text-md font-semibold   px-4 py-2">Not Applied</button>
 
-            <p>Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+            <p class="notes">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
 
 
                 <div class="flex gap-3">
-                    <button class="text-green-400 rounded-md text-md font-bold border-2 border-green-400 px-4 py-2">INTERVIEW</button>
+                    <button class="text-green-400 intervew-btn rounded-md text-md font-bold border-2 border-green-400 px-4 py-2">INTERVIEW</button>
 
-                    <button class="text-red-400 rounded-md text-md font-bold border-2 border-red-400 px-4 py-2" >REJECTED</button>
+                    <button class="text-red-400 rejected-btn rounded-md text-md font-bold border-2 border-red-400 px-4 py-2" >REJECTED</button>
                 </div>
 
 
@@ -142,37 +147,37 @@ Part-time
         <!-- main part 2 -->
           <div >
 
-            <img class="border-2 border-[#c7cdd6] rounded-full p-3 w-[50px]" src="./Trash (1).png" alt="">
+            <img class="border-2 border-[#c7cdd6] delete rounded-full p-3 w-[50px]" src="./Trash (1).png" alt="">
         </div>
 
 
 
     </div>
-    <div class="bg-white flex justify-between p-5 rounded-md ">
+    <div class="bg-white flex  card  justify-between p-5 rounded-md ">
 
         <!-- main part 1 -->
         <div  class="space-y-5">
 
             <h2 class="text-[#002C5C] font-bold text-xl job-name">DataViz Solutions</h2>
-            <p class="text-[#64748B] ">Data Visualization Specialist</p>
+            <p class="text-[#64748B] skillName ">Data Visualization Specialist</p>
 
 
-            <p class="text-[#64748B]">Boston, MA 
+            <p class="text-[#64748B] sarlary">Boston, MA 
 •
  Full-time
  •
  $125,000 - $165,000</p>
 
-            <button class="text-[#002C5C] rounded-md bg-[#EEF4FF] text-md font-semibold   px-4 py-2">Not Applied</button>
+            <button class="text-[#002C5C] applide rounded-md bg-[#EEF4FF] text-md font-semibold   px-4 py-2">Not Applied</button>
 
-            <p>Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
+            <p class="notes">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
 </p>
 
 
                 <div class="flex gap-3">
-                    <button class="text-green-400 rounded-md text-md font-bold border-2 border-green-400 px-4 py-2">INTERVIEW</button>
+                    <button class="text-green-400 intervew-btn rounded-md text-md font-bold border-2 border-green-400 px-4 py-2">INTERVIEW</button>
 
-                    <button class="text-red-400 rounded-md text-md font-bold border-2 border-red-400 px-4 py-2" >REJECTED</button>
+                    <button class="text-red-400 rejected-btn rounded-md text-md font-bold border-2 border-red-400 px-4 py-2" >REJECTED</button>
                 </div>
 
 
@@ -182,36 +187,36 @@ Part-time
         <!-- main part 2 -->
          <div >
 
-            <img class="border-2 border-[#c7cdd6] rounded-full p-3 w-[50px]" src="./Trash (1).png" alt="">
+            <img class="border-2 border-[#c7cdd6] delete rounded-full p-3 w-[50px]" src="./Trash (1).png" alt="">
         </div>
 
 
 
     </div>
-    <div class="bg-white flex justify-between p-5 rounded-md ">
+    <div class="bg-white flex  card  justify-between p-5 rounded-md ">
 
         <!-- main part 1 -->
         <div  class="space-y-5">
 
             <h2 class="text-[#002C5C] font-bold text-xl job-name">CloudFirst Inc</h2>
-            <p class="text-[#64748B] ">Backend Developer</p>
+            <p class="text-[#64748B] skillName">Backend Developer</p>
 
 
-            <p class="text-[#64748B]">Seattle, WA
+            <p class="text-[#64748B] sarlary">Seattle, WA
  •
  Full-time
  •
  $140,000 - $190,000</p>
 
-            <button class="text-[#002C5C] rounded-md bg-[#EEF4FF] text-md font-semibold   px-4 py-2">Not Applied</button>
+            <button class="text-[#002C5C] applide rounded-md bg-[#EEF4FF] text-md font-semibold   px-4 py-2">Not Applied</button>
 
-            <p>Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+            <p class="notes">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
 
 
                 <div class="flex gap-3">
-                    <button class="text-green-400 rounded-md text-md font-bold border-2 border-green-400 px-4 py-2">INTERVIEW</button>
+                    <button class="text-green-400 intervew-btn rounded-md text-md font-bold border-2 border-green-400 px-4 py-2">INTERVIEW</button>
 
-                    <button class="text-red-400 rounded-md text-md font-bold border-2 border-red-400 px-4 py-2" >REJECTED</button>
+                    <button class="text-red-400 rejected-btn rounded-md text-md font-bold border-2 border-red-400 px-4 py-2" >REJECTED</button>
                 </div>
 
 
@@ -221,36 +226,36 @@ Part-time
         <!-- main part 2 -->
           <div >
 
-            <img class="border-2 border-[#c7cdd6] rounded-full p-3 w-[50px]" src="./Trash (1).png" alt="">
+            <img class="border-2 border-[#c7cdd6] delete rounded-full p-3 w-[50px]" src="./Trash (1).png" alt="">
         </div>
 
 
 
     </div>
-    <div class="bg-white flex justify-between p-5 rounded-md ">
+    <div class="bg-white flex  card  justify-between p-5 rounded-md ">
 
         <!-- main part 1 -->
         <div  class="space-y-5">
 
             <h2 class="text-[#002C5C] font-bold text-xl job-name">Innovation Labs</h2>
-            <p class="text-[#64748B] ">UI/UX Engineer</p>
+            <p class="text-[#64748B] skillName ">UI/UX Engineer</p>
 
 
-            <p class="text-[#64748B]">Austin, TX
+            <p class="text-[#64748B] sarlary">Austin, TX
  •
  Full-time
  •
  $110,000 - $150,000</p>
 
-            <button class="text-[#002C5C] rounded-md bg-[#EEF4FF] text-md font-semibold   px-4 py-2">Not Applied</button>
+            <button class="text-[#002C5C] applide rounded-md bg-[#EEF4FF] text-md font-semibold   px-4 py-2">Not Applied</button>
 
-            <p>Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+            <p class="notes">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
 
 
                 <div class="flex gap-3">
-                    <button class="text-green-400 rounded-md text-md font-bold border-2 border-green-400 px-4 py-2">INTERVIEW</button>
+                    <button class="text-green-400 intervew-btn rounded-md text-md font-bold border-2 border-green-400 px-4 py-2">INTERVIEW</button>
 
-                    <button class="text-red-400 rounded-md text-md font-bold border-2 border-red-400 px-4 py-2" >REJECTED</button>
+                    <button class="text-red-400 rejected-btn rounded-md text-md font-bold border-2 border-red-400 px-4 py-2" >REJECTED</button>
                 </div>
 
 
@@ -260,36 +265,36 @@ Part-time
         <!-- main part 2 -->
           <div >
 
-            <img class="border-2 border-[#c7cdd6] rounded-full p-3 w-[50px]" src="./Trash (1).png" alt="">
+            <img class="border-2 border-[#c7cdd6] delete rounded-full p-3 w-[50px]" src="./Trash (1).png" alt="">
         </div>
 
 
 
     </div>
-    <div class="bg-white flex justify-between p-5 rounded-md ">
+    <div class="bg-white  card  flex justify-between p-5 rounded-md ">
 
         <!-- main part 1 -->
         <div  class="space-y-5">
 
             <h2 class="text-[#002C5C] font-bold text-xl job-name">MegaCorp Solutions</h2>
-            <p class="text-[#64748B] ">JavaScript Developer</p>
+            <p class="text-[#64748B] skillName ">JavaScript Developer</p>
 
 
-            <p class="text-[#64748B]">New York, NY
+            <p class="text-[#64748B] sarlary">New York, NY
  • 
 Full-time 
 •
  $130,000 - $170,00</p>
 
-            <button class="text-[#002C5C] rounded-md bg-[#EEF4FF] text-md font-semibold   px-4 py-2">Not Applied</button>
+            <button class="text-[#002C5C] applide rounded-md bg-[#EEF4FF] text-md font-semibold   px-4 py-2">Not Applied</button>
 
-            <p>Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+            <p class="notes">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
 
 
                 <div class="flex gap-3">
-                    <button class="text-green-400 rounded-md text-md font-bold border-2 border-green-400 px-4 py-2">INTERVIEW</button>
+                    <button class="text-green-400 intervew-btn rounded-md text-md font-bold border-2 border-green-400 px-4 py-2">INTERVIEW</button>
 
-                    <button class="text-red-400 rounded-md text-md font-bold border-2 border-red-400 px-4 py-2" >REJECTED</button>
+                    <button class="text-red-400 rejected-btn rounded-md text-md font-bold border-2 border-red-400 px-4 py-2" >REJECTED</button>
                 </div>
 
 
@@ -299,36 +304,36 @@ Full-time
         <!-- main part 2 -->
          <div >
 
-            <img class="border-2 border-[#c7cdd6] rounded-full p-3 w-[50px]" src="./Trash (1).png" alt="">
+            <img class="border-2 border-[#c7cdd6] delete rounded-full p-3 w-[50px]" src="./Trash (1).png" alt="">
         </div>
 
 
 
     </div>
-    <div class="bg-white flex justify-between p-5 rounded-md ">
+    <div class="bg-white flex  card  justify-between p-5 rounded-md ">
 
         <!-- main part 1 -->
         <div  class="space-y-5">
 
             <h2 class="text-[#002C5C] font-bold text-xl job-name">StartupXYZ</h2>
-            <p class="text-[#64748B] ">Full Stack Engineer</p>
+            <p class="text-[#64748B] skillName ">Full Stack Engineer</p>
 
 
-            <p class="text-[#64748B]">Remote
+            <p class="text-[#64748B] sarlary">Remote
  • 
 Full-time 
 •
  $120,000 - $160,000</p>
 
-            <button class="text-[#002C5C] rounded-md bg-[#EEF4FF] text-md font-semibold   px-4 py-2">Not Applied</button>
+            <button class="text-[#002C5C] applide rounded-md bg-[#EEF4FF] text-md font-semibold   px-4 py-2">Not Applied</button>
 
-            <p>Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+            <p class="notes">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
 
 
                 <div class="flex gap-3">
-                    <button class="text-green-400 rounded-md text-md font-bold border-2 border-green-400 px-4 py-2">INTERVIEW</button>
+                    <button class="text-green-400 intervew-btn rounded-md text-md font-bold border-2 border-green-400 px-4 py-2">INTERVIEW</button>
 
-                    <button class="text-red-400 rounded-md text-md font-bold border-2 border-red-400 px-4 py-2" >REJECTED</button>
+                    <button class="text-red-400 rejected-btn rounded-md text-md font-bold border-2 border-red-400 px-4 py-2" >REJECTED</button>
                 </div>
 
 
@@ -338,36 +343,36 @@ Full-time
         <!-- main part 2 -->
          <div >
 
-            <img class="border-2 border-[#c7cdd6] rounded-full p-3 w-[50px]" src="./Trash (1).png" alt="">
+            <img class="border-2 border-[#c7cdd6] delete rounded-full p-3 w-[50px]" src="./Trash (1).png" alt="">
         </div>
 
 
 
     </div>
-    <div class="bg-white p-5 flex justify-between rounded-md ">
+    <div class="bg-white p-5  card  flex justify-between rounded-md ">
 
         <!-- main part 1 -->
         <div  class="space-y-5">
 
             <h2 class="text-[#002C5C] font-bold text-xl job-name">TechCorp Industries</h2>
-            <p class="text-[#64748B] ">Senior Frontend Developer</p>
+            <p class="text-[#64748B] skillName">Senior Frontend Developer</p>
 
 
-            <p class="text-[#64748B]">San Francisco, CA
+            <p class="text-[#64748B] sarlary">San Francisco, CA
  • 
 Full-time 
 •
  $130,000 - $175,000</p>
 
-            <button class="text-[#002C5C] rounded-md bg-[#EEF4FF] text-md font-semibold   px-4 py-2">Not Applied</button>
+            <button class="text-[#002C5C] applide rounded-md bg-[#EEF4FF] text-md font-semibold    px-4 py-2">Not Applied</button>
 
-            <p>We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+            <p class="notes">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
 
 
                 <div class="flex gap-3">
-                    <button class="text-green-400 rounded-md text-md font-bold border-2 border-green-400 px-4 py-2">INTERVIEW</button>
+                    <button class="text-green-400 intervew-btn rounded-md text-md font-bold border-2 border-green-400 px-4 py-2">INTERVIEW</button>
 
-                    <button class="text-red-400 rounded-md text-md font-bold border-2 border-red-400 px-4 py-2" >REJECTED</button>
+                    <button class="text-red-400 rejected-btn rounded-md text-md font-bold border-2 border-red-400 px-4 py-2" >REJECTED</button>
                 </div>
 
 
@@ -377,7 +382,7 @@ Full-time
         <!-- main part 2 -->
          <div >
 
-            <img class="border-2 border-[#c7cdd6] rounded-full p-3 w-[50px]" src="./Trash (1).png" alt="">
+            <img class="border-2 border-[#c7cdd6] delete rounded-full p-3 w-[50px]" src="./Trash (1).png" alt="">
         </div>
 
 
@@ -385,6 +390,34 @@ Full-time
 
 
     </section>
+
+     <!-- filter card -->
+
+
+     
+        <section id=" interview-section" class="hidden" >
+
+            interview section
+
+        </section>
+
+        <section id="Rejected-section" class="hidden" >
+
+           Rejected section
+
+        </section>
+
+        </div>
+
+    <!-- empty state -->
+
+    <div id="empty-state" class=" hidden flex flex-col justify-center items-center w-[100%] bg-white mx-auto py-10 rounded-md space-y-3">
+
+        <img src="./jobs.png" alt="">
+        <p class="font-bold text-2xl "> No jobs Available</p>
+        <p class=" text-md text-[#b0a5a5]">check back soon for new jobs opportunities</p>
+
+    </div>
 
 
     
