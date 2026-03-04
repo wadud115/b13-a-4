@@ -4,8 +4,10 @@
 
 let currentTab = "all"
 
-const tabActive = [ "bg-navy" ,"border-navy" , "text-white"];
-const inActive = ["bg-transparent" ,  "text-slate-700" , "border-slate-200" ];
+const tabActive = ["bg-blue-500", "text-white"];
+
+const inActive = ["bg-gray-200", "text-gray-600"];
+
 
 const allcards = document.getElementById('allcards')
 
