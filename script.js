@@ -21,6 +21,9 @@ const stats = document.getElementById('stats')
 console.log(allcards,interviewSection,RejectedSection);
 
 
+
+
+
 function switchTab(tab){
 
     console.log(tab);
@@ -154,6 +157,23 @@ document.getElementById("jobs-container").addEventListener("click",function(even
 
     
 })
+
+
+
+
+    
+// const interviewBtn = document.getElementsByClassName("intervew-btn");
+// const rejectedBtn = document.getElementsByClassName("rejected-btn");
+// const statusBtn = document.getElementsByClassName("applide");
+
+// interviewBtn.addEventListener("click", function() {
+//     statusBtn.innerText = "Interview";
+// });
+
+// rejectedBtn.addEventListener("click", function() {
+//     statusBtn.innerText = "Rejected";
+// });
+
 
 function updateState(){
 
